@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '3889007748023956'); // 替换为你的 Pixel ID
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=3889007748023956&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center; /* 中心对齐 */
+        }
+
+        .banner-container {
+            position: relative; /* 设置相对定位 */
+            width: 100%; /* 图片宽度 */
+            max-width: 800px; /* 最大宽度 */
+            margin: auto; /* 居中 */
+        }
+
+        .banner {
+            width: 100%; /* 图片宽度 */
+            height: auto; /* 高度自适应 */
+        }
+
+        .discord-button {
+            position: absolute; /* 设置为绝对定位 */
+            bottom: 120px;      /* 距离底部 120px */
+            left: 50%;         /* 左侧 50% */
+            transform: translateX(-50%); /* 水平居中 */
+            background-color: #7289DA; /* Discord 蓝色 */
+            color: white;              /* 字体颜色 */
+            border: none;              /* 无边框 */
+            padding: 20px 40px;        /* 增加内边距以增大按钮大小 */
+            text-align: center;        /* 文本居中 */
+            text-decoration: none;      /* 去除下划线 */
+            display: inline-flex;       /* 使按钮呈现为块元素并支持图标 */
+            align-items: center;        /* 垂直居中对齐 */
+            font-size: 50px;           /* 增加字体大小 */
+            cursor: pointer;           /* 鼠标悬停时显示为手形 */
+            border-radius: 10px;       /* 调整圆角 */
+            transition: background-color 0.3s; /* 背景色过渡效果 */
+        }
+
+        .discord-button:hover {
+            background-color: #5B6EAE; /* 鼠标悬停时的颜色 */
+        }
+
+        .discord-button i {
+            margin-right: 10px; /* 图标与文本之间的间距 */
+        }
+
+        /* 媒体查询：当屏幕宽度小于600px时 */
+        @media (max-width: 600px) {
+            .discord-button {
+                padding: 15px 30px; /* 减小内边距 */
+                font-size: 18px;     /* 减小字体大小 */
+            }
+            h1 {
+                font-size: 24px; /* 调整标题字体大小 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <img src="3.jpg" alt="主图" class="banner">
+        <a href="https://discord.gg/nupnGPhy" target="_blank" class="discord-button" 
+           onclick="fbq('track', 'ClickDiscordButton');">
+           <i class="fab fa-discord"></i> 免费领取
+        </a>
+    </div>
+</body>
+</html>
