@@ -45,36 +45,57 @@
             height: auto; /* 高度自适应 */
         }
 
-        .discord-button {
+        .button-container {
             position: absolute; /* 设置为绝对定位 */
-            bottom: 120px;      /* 距离底部 120px */
+            bottom: 20px;      /* 距离底部 20px */
             left: 50%;         /* 左侧 50% */
             transform: translateX(-50%); /* 水平居中 */
-            background-color: #7289DA; /* Discord 蓝色 */
+            display: flex;     /* 使用 Flexbox 布局 */
+            flex-direction: column; /* 垂直排列按钮 */
+            gap: 20px;        /* 按钮之间的间距 */
+        }
+
+        .button {
             color: white;              /* 字体颜色 */
             border: none;              /* 无边框 */
-            padding: 20px 40px;        /* 增加内边距以增大按钮大小 */
+            padding: 25px 50px;        /* 增加内边距以增大按钮大小 */
             text-align: center;        /* 文本居中 */
             text-decoration: none;      /* 去除下划线 */
             display: inline-flex;       /* 使按钮呈现为块元素并支持图标 */
             align-items: center;        /* 垂直居中对齐 */
-            font-size: 50px;           /* 增加字体大小 */
+            font-size: 24px;           /* 增加字体大小 */
             cursor: pointer;           /* 鼠标悬停时显示为手形 */
             border-radius: 10px;       /* 调整圆角 */
             transition: background-color 0.3s; /* 背景色过渡效果 */
+        }
+
+        .discord-button {
+            background-color: #7289DA; /* Discord 蓝色 */
+        }
+
+        .telegram-button {
+            background-color: #28A745; /* Telegram 绿色 */
+        }
+
+        .twitter-button {
+            background-color: #1DA1F2; /* Twitter 蓝色 */
         }
 
         .discord-button:hover {
             background-color: #5B6EAE; /* 鼠标悬停时的颜色 */
         }
 
-        .discord-button i {
-            margin-right: 10px; /* 图标与文本之间的间距 */
+        .telegram-button:hover {
+            background-color: #218838; /* 鼠标悬停时的颜色 */
+        }
+
+        .twitter-button:hover {
+            background-color: #0d95e8; /* 鼠标悬停时的颜色 */
         }
 
         /* 媒体查询：当屏幕宽度小于600px时 */
         @media (max-width: 600px) {
-            .discord-button {
+            .button {
                 padding: 15px 30px; /* 减小内边距 */
                 font-size: 18px;     /* 减小字体大小 */
             }
@@ -85,12 +106,30 @@
     </style>
 </head>
 <body>
+
     <div class="banner-container">
         <img src="3.jpg" alt="主图" class="banner">
-        <a href="https://discord.gg/nupnGPhy" target="_blank" class="discord-button" 
-           onclick="fbq('track', 'ClickDiscordButton');">
-           <i class="fab fa-discord"></i> 免费领取
-        </a>
+        
+        <!-- 按钮容器 -->
+        <div class="button-container">
+            <!-- Discord Button -->
+            <a href="https://discord.gg/nupnGPhy" target="_blank" class="button discord-button" 
+               onclick="fbq('track', 'ClickDiscordButton');">
+               <i class="fab fa-discord" style="margin-right: 10px;"></i>加入Discord社区
+            </a>
+            
+            <!-- Telegram Button -->
+            <a href="https://t.me/+9TUVeX0ExSI1MmNl" target="_blank" class="button telegram-button" 
+               onclick="fbq('track', 'ClickTelegramButton');">
+               <i class="fab fa-telegram-plane" style="margin-right: 10px;"></i>加入Telegram群组
+            </a>
+
+            <!-- Twitter Button -->
+            <a href="https://x.com/Maison98491918" target="_blank" class="button twitter-button" 
+               onclick="fbq('track', 'ClickTwitterButton');">
+               <i class="fab fa-twitter" style="margin-right: 10px;"></i>关注 Twitter
+            </a>
+        </div>
     </div>
 </body>
 </html>
